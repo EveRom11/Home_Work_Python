@@ -15,6 +15,6 @@ def game():
     print(f'Петя: Здравствуй, сестренка!\nОтгадай числа, которые я загадал для тебя.\nИх сумма равна {s}, а прозведение равно {p}.')
     otvet_x=int(input('Твой ответ?\nПервое число: '))
     otvet_y=int(input('Второе число: '))
-    print('Верно!' if otvet_x==x or otvet_x==y and otvet_y==x or otvet_y==y else 'Получится в следующий раз')
+    print('Верно!' if (otvet_x==x or otvet_x==y) and (otvet_y==x or otvet_y==y) else 'Получится в следующий раз')
 
 game()
