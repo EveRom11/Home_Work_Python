@@ -16,5 +16,13 @@ def game():
     otvet_x=int(input('Твой ответ?\nПервое число: '))
     otvet_y=int(input('Второе число: '))
     print('Верно!' if (otvet_x==x or otvet_x==y) and (otvet_y==x or otvet_y==y) else 'Получится в следующий раз')
+    return s,p
 
 game()
+
+
+# x = int(input()) # сумма
+# y = int(input())  # произведение
+# for i in range(x):
+#     for j in range(y):
+#         if x == i + j and y == i * j:print(i, j)

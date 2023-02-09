@@ -10,5 +10,5 @@ def stepen(num,mn=0):
         print(res, end=' ')
         stepen(num, mn+1)
     
-stepen(1000000)
+stepen(10)
 
