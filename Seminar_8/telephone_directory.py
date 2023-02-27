@@ -21,7 +21,7 @@
 # сначала создает файл .txt, а потом будет в него дописывать данные
 def spravochnik_add(surname, name, number):
     data=surname + ' ' + name + ' : ' + number
-    file_p= open('telefon_book.txt', 'a', encoding='utf-8')
+    file_p= open('Home_Work_Python\Seminar_8/telefon_book.txt', 'a', encoding='utf-8')
     file_p.writelines(data+'\n')
     file_p.close()
     print(data)
@@ -47,7 +47,7 @@ def del_row(info,file_p):
     command=int(input('Введите номер строки, которую нужно удалить: '))
     list_file.pop(command-1)
     print(list_file)
-    file_p=open('telefon_book.txt','w',encoding='utf-8')
+    file_p=open('Home_Work_Python\Seminar_8/telefon_book.txt','w',encoding='utf-8')
     file_p.writelines(list_file)
     file_p.close()
     return command-1
@@ -63,13 +63,13 @@ def replace_row(info,file_p):
     print(list_file)
     list_file.insert(command-1,spravochnik_add(str(input('Введите фамилию: ')).capitalize(),str(input('Введите имя: ')).capitalize(), str(input('Введите номер телефона: ')))+'\n' )
     print(list_file)
-    file_p=open('telefon_book.txt','w',encoding='utf-8')
+    file_p=open('Home_Work_Python\Seminar_8/telefon_book.txt','w',encoding='utf-8')
     file_p.writelines(list_file)
     file_p.close()
 
 
 def telephone_directory(command):
-    file_p=open('telefon_book.txt','r',encoding='utf-8')
+    file_p=open('Home_Work_Python\Seminar_8/telefon_book.txt','r',encoding='utf-8')
 
     if command==1:spravochnik_add(str(input('Введите фамилию: ')).capitalize(),str(input('Введите имя: ')).capitalize(), str(input('Введите номер телефона: ')))
     elif command==2:reader(input("Введите фамилию или имя, чтобы найти контакт.\nНе вводите ничего, чтобы увидеть весь весь справочик: ").capitalize(),file_p)
@@ -79,3 +79,4 @@ def telephone_directory(command):
     file_p.close()
     
 telephone_directory(int(input('Введите команду:\n1- Добавить контакт \n2- Найти контакт\n3- Удалить контакт\n4- Изменить контакт\n----> ')))
+# 
